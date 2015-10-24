@@ -1,0 +1,28 @@
+<ion-pane>
+
+  <ion-content>
+    <ion-side-menus>
+      <!-- Left menu -->
+      <ion-side-menu side="left">
+      </ion-side-menu>
+
+      <ion-side-menu-content>
+        <!-- Main content, usually <ion-nav-view> -->
+      </ion-side-menu-content>
+
+      <!-- Right menu -->
+      <ion-side-menu side="right">
+      </ion-side-menu>
+
+    </ion-side-menus>
+    <ion-list>
+      <ion-item ng-repeat="n in news" ng-click="showNews()">
+        <img ng-src="{{n.img}}" class="thumbnail"></img>
+        <p ng-bind="n.text"></p>
+        <ion-option-button class="button-energized" ng-click="share()">
+          Поделиться
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-pane>
